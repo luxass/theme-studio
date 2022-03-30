@@ -5,3 +5,5 @@ export * from "./use-featon";
 export * from "./use-userion";
 export * from "./use-webbie";
 export * from "./use-is-mounted";
+export * from "./use-configuration";
+export * from "./use-biscuit-box";

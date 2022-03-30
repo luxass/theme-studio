@@ -12,24 +12,19 @@ module.exports = {
     backgroundImage: {
       grid: 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMElEQVQ4T2N89uzZfwY8QFJSEp80A+OoAcMiDP7//483HTx//hx/Ohg1gIFx6IcBALl+VXknOCvFAAAAAElFTkSuQmCC")',
     },
-    colors: {
-      transparent: "transparent",
-      white: "#fff",
-      black: "#000",
-      gray: {
-        900: "#202225",
-        800: "#2f3136",
-        700: "#36393f",
-        600: "#4f545c",
-        400: "#d4d7dc",
-        300: "#e3e5e8",
-        200: "#ebedef",
-        100: "#f2f3f5",
-      },
-      blue: colors.blue,
-      red: colors.red,
-    },
     extend: {
+      colors: {
+        gray: {
+          900: "#202225",
+          800: "#2f3136",
+          700: "#36393f",
+          600: "#4f545c",
+          400: "#d4d7dc",
+          300: "#e3e5e8",
+          200: "#ebedef",
+          100: "#f2f3f5",
+        },
+      },
       spacing: {
         1.875: "1.875rem",
         5.5: "1.375rem",
@@ -91,8 +86,6 @@ module.exports = {
       },
       boxShadow: {
         variable: "0 4px 4px rgba(0, 0, 0, .25)",
-        saturation:
-          "rgb(255 255 255) 0px 0px 0px 1.5px, rgb(0 0 0 / 30%) 0px 0px 1px 1px inset, rgb(0 0 0 / 40%) 0px 0px 1px 2px",
       },
       inset: {
         badge: "9px",
@@ -100,22 +93,6 @@ module.exports = {
       },
       fontFamily: {
         roboto: "Roboto, sans-serif",
-      },
-      animation: {
-        loader: "loader 0.75s 0s infinite linear",
-      },
-      keyframes: {
-        loader: {
-          "0%": {
-            transform: "rotate(0deg) scale(1)",
-          },
-          "50%": {
-            transform: "rotate(180deg) scale(0.8)",
-          },
-          "100%": {
-            transform: "rotate(360deg) scale(1)",
-          },
-        },
       },
     },
   },
@@ -126,24 +103,8 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addUtilities, addComponents }) {
-      const newUtilities = {
-        ".transform-50": {
-          transform: "translate(-50%, -50%)",
-        },
-        ".divider-end": {
-          transform: "translateY(-50%)",
-          left: "auto",
-          right: "7%",
-        },
-        ".divider-start": {
-          transform: "translateY(-50%)",
-          left: "7%",
-        },
-        ".picker-pointer": {
-          transform: "translate(-4px, -4px)",
-        },
-      };
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {};
 
       const sizes = [0, 1, 2, 3, 4, 5, 6];
 
