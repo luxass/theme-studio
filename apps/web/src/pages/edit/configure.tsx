@@ -11,15 +11,10 @@ import {
 
 export default function Configure() {
   const { user, isLoading } = useUser();
-
   return (
     <Configuration>
       <Tab.Group as="div" className="w-full h-screen flex">
-        <ConfigurationSidebar
-          onDone={() => {
-            console.log("Hey");
-          }}
-        >
+        <ConfigurationSidebar>
           <Link
             href="https://github.com/DeprecatedLuxas/theme-studio/issues"
             passHref
